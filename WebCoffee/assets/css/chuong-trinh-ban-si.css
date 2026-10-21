@@ -1,0 +1,131 @@
+/* SID CORP Coffee - Chương trình bán sỉ (chuong-trinh-ban-si.html). Chỉ dùng token trong style.css. */
+
+/* Hero + bảng so sánh */
+.program-hero {
+  position: relative; overflow: hidden;
+  padding: var(--space-9) var(--gutter) var(--space-11);
+  background: var(--color-surface-base);
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-7p);
+}
+.program-hero-wave {
+  position: absolute; left: 50%; bottom: -362px; transform: translateX(-50%);
+  width: 1557px; height: 829px; max-width: none;
+  color: var(--color-surface-muted); opacity: .75; pointer-events: none;
+}
+.program-hero-top {
+  position: relative; z-index: 1;
+  width: 100%; max-width: 640px;
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-6p);
+  text-align: center;
+}
+.program-hero-copy { width: 100%; display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
+.program-heading-group { width: 100%; display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+.program-lead { max-width: 526px; font-size: var(--fs-md); }
+
+.program-table-block { position: relative; z-index: 1; width: 100%; max-width: var(--container); }
+.program-table-hint { display: none; margin-bottom: var(--space-3); font-size: var(--fs-xs); color: var(--color-text-inverse); text-align: center; }
+.program-table-scroll {
+  width: 100%; overflow-x: auto; overscroll-behavior-x: contain;
+  background: var(--color-surface-white); border-radius: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+.program-table-scroll:focus-visible { outline: 3px solid var(--color-brand); outline-offset: 4px; }
+.program-table {
+  width: 100%; min-width: 960px;
+  table-layout: fixed; border-collapse: collapse;
+  font-size: var(--fs-md); font-weight: 500; line-height: var(--lh-base);
+  color: var(--color-text-primary);
+}
+.program-table th, .program-table td {
+  border-right: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line);
+  text-align: left; vertical-align: middle;
+}
+.program-table tr > :last-child { border-right: 0; }
+.program-table tbody tr:last-child > * { border-bottom: 0; }
+.program-table tbody th, .program-table tbody td { height: 80px; padding: 18px var(--space-6); }
+.program-table tbody th { font-weight: 500; }
+.program-table tbody td { font-weight: 400; }
+.program-table-header { height: 160px; padding: var(--space-5); text-align: center !important; }
+.program-table-header .btn { margin-top: var(--space-4); }
+.program-table-title { display: flex; justify-content: center; align-items: flex-end; gap: var(--space-2); }
+.program-table-category {
+  font-family: var(--font-heading); font-weight: 600; font-size: var(--fs-xl); line-height: var(--lh-heading);
+  font-variation-settings: "SOFT" 0, "WONK" 1, "opsz" 32;
+  color: var(--color-text-primary); white-space: nowrap;
+}
+.program-table-header.is-featured .program-table-category { color: var(--color-brand-mid); }
+.program-table-subtitle { padding-block: var(--space-1); font-size: var(--fs-xs); color: var(--color-text-inverse); white-space: nowrap; }
+
+/* Ba hướng bắt đầu (nền nâu) */
+.program-partners {
+  position: relative; overflow: hidden;
+  padding: var(--space-9) var(--gutter);
+  background: var(--color-brand);
+}
+.program-partners-wave {
+  position: absolute; top: 40px; left: -100px;
+  width: 2140px; height: 680px; max-width: none;
+  color: rgba(241, 220, 199, .06); pointer-events: none;
+}
+.program-partners-grid {
+  position: relative; z-index: 1;
+  max-width: 1060px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6p);
+  text-align: center;
+}
+.program-option { min-width: 0; display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+.program-option-title {
+  font-family: var(--font-heading); font-weight: 600; font-size: var(--fs-4xl); line-height: 1.2;
+  font-variation-settings: "SOFT" 0, "WONK" 1, "opsz" 80;
+  color: var(--color-surface-strong); white-space: nowrap;
+}
+.program-option-description { max-width: 300px; font-size: 20px; color: var(--color-text-secondary); }
+
+/* Chuẩn bị trước khi liên hệ */
+.program-prepare { padding: var(--space-8) var(--gutter) var(--space-9); background: var(--color-surface-white); }
+.program-prepare-container {
+  max-width: var(--container); margin: 0 auto;
+  display: grid; grid-template-columns: minmax(0, 620fr) minmax(0, 590fr); align-items: center; gap: 70px;
+}
+.program-prepare-picture {
+  position: relative; overflow: hidden; aspect-ratio: 1;
+  border-radius: 16px 16px 16px var(--radius-sm);
+}
+.program-prepare-picture::after { content: ""; position: absolute; inset: 0; background: rgba(48, 39, 34, .06); pointer-events: none; }
+.program-prepare-image { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; transform-origin: 50% 50%; will-change: transform; }
+.program-prepare-content { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-6p); }
+.program-prepare-text { display: flex; flex-direction: column; gap: var(--space-5); }
+.program-h2 { line-height: 1.4; text-align: left; }
+.program-prepare-body { font-size: var(--fs-md); color: var(--color-text-primary); }
+.program-prepare-list { margin: var(--space-5) 0; padding-left: 18px; }
+.program-prepare-list li::marker { color: var(--color-brand-mid); }
+
+/* Responsive */
+@media (max-width: 991px) {
+  .program-hero { padding-bottom: var(--space-10); gap: var(--space-7); }
+  .program-hero-wave { width: 220%; height: auto; aspect-ratio: 1557 / 829; bottom: 0; transform: translate(-50%, 44%); }
+  .program-table-hint { display: block; }
+  .program-partners-wave { width: 300%; }
+  .program-prepare-container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
+}
+@media (max-width: 767px) {
+  .program-hero { padding: var(--space-7p) var(--gutter) var(--space-9); gap: var(--space-6p); }
+  .program-table { min-width: 860px; }
+  .program-table tr > :first-child {
+    position: sticky; left: 0; z-index: 1; width: 132px;
+    background: var(--color-surface-white); box-shadow: 1px 0 0 var(--color-line);
+  }
+  .program-table tbody th, .program-table tbody td { padding-inline: var(--space-4); }
+  .program-table tbody th { font-size: var(--fs-sm); }
+  .program-partners { padding-block: var(--space-8); }
+  .program-partners-grid { grid-template-columns: 1fr; gap: var(--space-7); }
+  .program-option-description { max-width: 360px; font-size: var(--fs-md); }
+  .program-prepare { padding-block: var(--space-7p) var(--space-8); }
+  .program-prepare-container { grid-template-columns: 1fr; gap: var(--space-6p); }
+  .program-h2 { text-align: left; }
+}
+@media (max-width: 479px) {
+  .program-hero { padding-bottom: var(--space-8); }
+  .program-hero-top > .btn { align-self: stretch; }
+  .program-prepare-content > .btn { align-self: stretch; }
+}

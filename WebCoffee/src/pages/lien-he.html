@@ -1,0 +1,125 @@
+<!--meta {"title":"Liên hệ, yêu cầu mẫu thử cà phê | SID CORP","description":"Liên hệ SID CORP để xin mẫu thử cà phê, hỏi báo giá sỉ hoặc đặt câu hỏi. Kể về quán và gu cà phê của bạn, SID CORP xem yêu cầu rồi phản hồi qua email cho bạn.","nav":"lien-he","css":"lien-he","ctaLabel":"Gửi yêu cầu","ctaHref":"#gui-yeu-cau","ctaTitle":"Sẵn sàng trò chuyện về cà phê?","ogImage":"espresso-machine.jpg"}-->
+<!doctype html>
+<html lang="vi">
+<head>
+{{head}}
+</head>
+<body>
+{{header}}
+<main id="main-content" tabindex="-1">
+
+  <section class="contact-inquiry" aria-labelledby="contact-title">
+    <div class="contact-container">
+      <header class="contact-hero">
+        <p class="contact-label" data-anim="load" style="--y:18px;--dur:.65s">LIÊN HỆ</p>
+        <h1 id="contact-title" class="h-display contact-h1" data-anim="load" style="--y:32px;--dur:.95s;--d:.08s">Cùng bàn chuyện cà phê<br>cho quán của bạn.</h1>
+        <p class="contact-intro" data-anim="load" style="--y:20px;--dur:.75s;--d:.2s">Kể cho SID CORP về quán và loại cà phê bạn đang tìm. Bắt đầu bằng một yêu cầu mẫu thử hoặc một câu hỏi chung.</p>
+      </header>
+
+      <div class="contact-columns">
+        <div class="contact-guidance" data-anim="load" style="--y:24px;--dur:.85s;--d:.3s">
+          <div class="contact-guidance-group">
+            <h2 class="contact-h2">Yêu cầu mẫu thử</h2>
+            <p class="contact-body-large">Điền thông tin quán và gu cà phê vào biểu mẫu. Việc có mẫu, chi phí và cách giao sẽ được xác nhận sau khi SID CORP xem yêu cầu.</p>
+          </div>
+          <div class="contact-guidance-group">
+            <h3 class="contact-h3">Bạn có câu hỏi khác?</h3>
+            <p>Muốn hỏi báo giá hay chuyện khác, bạn cứ dùng cùng biểu mẫu này. Ghi rõ nhu cầu trong lời nhắn, số liệu ước tính cũng được.</p>
+          </div>
+          <p class="contact-note">SID CORP xem từng yêu cầu để hiểu nhu cầu của quán. Gửi yêu cầu chưa phải là xác nhận mẫu thử hay đơn hàng.</p>
+        </div>
+
+        <div id="gui-yeu-cau" class="contact-form-card" data-anim="load" style="--y:24px;--dur:.85s;--d:.38s">
+          <h2 id="form-title" class="contact-h2 contact-form-title">Gửi yêu cầu</h2>
+          <form class="contact-form" action="#" method="post" data-inquiry data-success="form-success" data-error="form-error" aria-labelledby="form-title">
+            <p class="contact-note contact-required-note">Mục có dấu <span aria-hidden="true">*</span><span class="visually-hidden">sao</span> là bắt buộc. Câu trả lời ngắn hay số liệu ước tính đều được.</p>
+
+            <div id="form-error" class="form-error-summary" role="alert" hidden>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5v5.5M12 16.3v.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <p>Còn vài mục chưa đúng hoặc còn trống. Bạn xem lại các ô được đánh dấu bên dưới nhé.</p>
+            </div>
+
+            <div class="contact-fields">
+              <div class="contact-field">
+                <label for="f-name" class="contact-field-label">Họ và tên <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-name" name="ho-ten" type="text" class="contact-input" placeholder="Ví dụ: Nguyễn Văn An" autocomplete="name" maxlength="256" required aria-describedby="err-name">
+                <p id="err-name" class="field-error"></p>
+              </div>
+              <div class="contact-field">
+                <label for="f-cafe" class="contact-field-label">Tên quán / doanh nghiệp <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-cafe" name="ten-quan" type="text" class="contact-input" placeholder="Ví dụ: Quán Mộc" autocomplete="organization" maxlength="256" required aria-describedby="err-cafe">
+                <p id="err-cafe" class="field-error"></p>
+              </div>
+              <div class="contact-field">
+                <label for="f-email" class="contact-field-label">Email <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-email" name="email" type="email" class="contact-input" placeholder="ten@quancafe.vn" autocomplete="email" inputmode="email" spellcheck="false" maxlength="256" required aria-describedby="err-email">
+                <p id="err-email" class="field-error"></p>
+              </div>
+              <div class="contact-field">
+                <label for="f-location" class="contact-field-label">Khu vực <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-location" name="khu-vuc" type="text" class="contact-input" placeholder="Hà Nội, TP.HCM..." autocomplete="address-level1" maxlength="256" required aria-describedby="err-location">
+                <p id="err-location" class="field-error"></p>
+              </div>
+              <div class="contact-field">
+                <label for="f-need" class="contact-field-label">Nhu cầu cà phê <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-need" name="nhu-cau" type="text" class="contact-input" placeholder="Espresso, pha phin, món sữa..." maxlength="256" required aria-describedby="err-need">
+                <p id="err-need" class="field-error"></p>
+              </div>
+              <div class="contact-field">
+                <label for="f-message" class="contact-field-label">Lời nhắn <span class="contact-optional">(không bắt buộc)</span></label>
+                <textarea id="f-message" name="loi-nhan" class="contact-input contact-textarea" rows="4" placeholder="Xin mẫu thử, hỏi báo giá hoặc câu hỏi khác" maxlength="5000" aria-describedby="err-message"></textarea>
+                <p id="err-message" class="field-error"></p>
+              </div>
+            </div>
+
+            <button type="submit" class="btn contact-submit">Gửi yêu cầu</button>
+            <p class="contact-note">SID CORP dùng các thông tin này để xem yêu cầu và phản hồi bạn qua email.</p>
+          </form>
+
+          <div id="form-success" class="contact-success" tabindex="-1" hidden>
+            <span class="contact-success-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3 class="contact-success-heading">Cảm ơn bạn đã liên hệ.</h3>
+            <p>SID CORP đã nhận yêu cầu của bạn, sẽ xem thông tin và phản hồi qua email.</p>
+            <p class="contact-note">Mẫu thử tùy vào lượng hàng có sẵn. Chi phí và cách giao sẽ được xác nhận qua email.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cau-hoi" class="contact-faq" aria-labelledby="faq-title">
+    <div class="contact-faq-container">
+      <h2 id="faq-title" class="h-section contact-faq-heading" data-anim>Trước khi bạn liên hệ.</h2>
+      <div class="contact-faq-list" data-anim style="--d:.1s">
+        <details class="contact-faq-item" name="faq" open>
+          <summary class="contact-faq-summary">
+            <span class="contact-faq-label">Chưa chọn được cà phê thì có hỏi được không?</span>
+            <span class="contact-faq-icon" aria-hidden="true"></span>
+          </summary>
+          <p class="contact-faq-answer">Được. Bạn không cần chọn sẵn cà phê trước khi liên hệ. Chỉ cần cho biết quán định pha thế nào, hoặc nói rằng bạn chưa chắc.</p>
+        </details>
+        <details class="contact-faq-item" name="faq">
+          <summary class="contact-faq-summary">
+            <span class="contact-faq-label">Yêu cầu nên có những thông tin gì?</span>
+            <span class="contact-faq-icon" aria-hidden="true"></span>
+          </summary>
+          <p class="contact-faq-answer">Tên quán hoặc doanh nghiệp, khu vực, email và cách quán định phục vụ cà phê. Câu hỏi hay yêu cầu riêng, bạn ghi vào phần lời nhắn.</p>
+        </details>
+        <details class="contact-faq-item" name="faq">
+          <summary class="contact-faq-summary">
+            <span class="contact-faq-label">Gửi yêu cầu mẫu thử có nghĩa là đã chốt giao hàng?</span>
+            <span class="contact-faq-icon" aria-hidden="true"></span>
+          </summary>
+          <p class="contact-faq-answer">Chưa. Yêu cầu mẫu thử chỉ là bước hỏi thông tin. Việc có mẫu và chi tiết giao hàng sẽ được xác nhận riêng.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+{{cta}}
+</main>
+{{footer}}
+</body>
+</html>

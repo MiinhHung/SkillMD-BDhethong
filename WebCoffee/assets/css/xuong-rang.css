@@ -1,0 +1,161 @@
+/* SID CORP Coffee - trang Xưởng rang (xuong-rang.html). Chỉ dùng token trong style.css. */
+
+.roastery-title { font-size: var(--fs-xl); }
+.roastery-small-title { font-size: var(--fs-lg); line-height: 1.5; color: inherit; }
+.roastery-intro { width: 100%; max-width: 840px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: var(--space-6p); text-align: center; }
+.roastery-intro-copy { width: 100%; display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
+.roastery-icon { width: 32px; height: 32px; flex-shrink: 0; color: var(--color-brand); }
+
+/* Hero */
+.roastery-hero {
+  position: relative;
+  height: 880px;
+  padding: var(--space-9) var(--gutter) var(--space-11);
+  background: var(--color-surface-base);
+  display: flex; flex-direction: column; align-items: center;
+}
+.roastery-hero-copy { width: 100%; display: flex; flex-direction: column; align-items: center; gap: var(--space-6p); text-align: center; }
+.roastery-hero-top { width: 100%; display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
+.roastery-hero-heading { width: 100%; display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+.roastery-hero-title { max-width: 900px; text-align: center; }
+.roastery-hero-description { max-width: 560px; font-size: var(--fs-md); }
+.roastery-hero-photo {
+  position: absolute; top: 557px; left: 0; right: 0;
+  width: calc(100% - 2 * var(--gutter)); max-width: 1120px; height: 300px; margin: 0 auto;
+  border-radius: var(--radius-sm); overflow: hidden;
+  background: var(--color-brand-soft);
+}
+.roastery-hero-photo img { position: absolute; top: -10%; left: 0; width: 100%; height: 120%; max-width: none; object-fit: cover; will-change: transform; }
+
+/* Câu chuyện */
+.roastery-story { padding: var(--space-8) var(--space-10) var(--space-9); }
+.roastery-story-container { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-8); }
+.roastery-story-intro { width: 100%; max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: var(--space-6p); text-align: center; }
+.roastery-story-description { max-width: 620px; }
+.roastery-story-grid { width: 100%; display: flex; flex-direction: column; gap: var(--space-5); }
+.roastery-story-row { width: 100%; display: grid; gap: var(--space-5); }
+.roastery-story-row--top { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); }
+.roastery-story-row--bottom { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr); }
+.roastery-story-card {
+  min-width: 0; height: 360px; padding: var(--space-5);
+  display: flex; flex-direction: column; justify-content: center; align-items: center; gap: var(--space-3);
+  border: 1px solid var(--color-line); border-radius: 16px; text-align: center;
+}
+.roastery-story-photo { position: relative; min-width: 0; height: 360px; border-radius: 16px; overflow: hidden; background: var(--color-brand-soft); }
+.roastery-story-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease-out); }
+.roastery-story-photo:hover img { transform: scale(1.04); }
+.roastery-story-photo--tint::after { content: ""; position: absolute; inset: 0; background: rgba(48, 39, 34, .06); pointer-events: none; }
+
+/* Cách làm */
+.roastery-approach { padding: var(--space-8) var(--space-10) var(--space-9); background: var(--color-surface-base); }
+.roastery-approach-container { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: var(--space-7p); }
+.roastery-approach-description { max-width: 670px; }
+.roastery-values { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); }
+.roastery-value-card {
+  min-height: 240px; padding: var(--space-6) var(--space-5) var(--space-5);
+  display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center;
+  background: rgba(89, 60, 48, .03); border: 1px solid rgba(89, 60, 48, .12); border-radius: var(--radius-sm);
+}
+.roastery-value-copy { width: 100%; display: flex; flex-direction: column; gap: var(--space-2); }
+.roastery-value-copy .roastery-small-title { color: var(--color-text-primary); }
+.roastery-feature-photo { position: relative; width: 100%; height: 636px; border-radius: 16px; overflow: hidden; background: var(--color-brand-soft); }
+.roastery-feature-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; will-change: transform; }
+
+/* Quy trình: khung ảnh ghim, đổi ảnh theo từng bước */
+.roastery-process { padding: var(--space-8) var(--gutter) var(--space-9); background: var(--color-surface-base); }
+.process-track { --stage-h: min(680px, calc(100vh - 120px)); position: relative; max-width: var(--container); margin: 0 auto; height: calc(var(--stage-h) + 1200px); }
+.process-marker { position: absolute; left: 0; width: 1px; height: 400px; pointer-events: none; }
+.process-marker:nth-child(1) { top: calc(var(--stage-h) / 2); }
+.process-marker:nth-child(2) { top: calc(var(--stage-h) / 2 + 400px); }
+.process-marker:nth-child(3) { top: calc(var(--stage-h) / 2 + 800px); }
+.process-container {
+  position: sticky; top: calc((100vh - var(--stage-h)) / 2);
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 620px); gap: 70px; align-items: stretch;
+}
+.process-copy { min-width: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: var(--space-6); }
+.process-rows { width: 100%; display: flex; flex-direction: column; gap: var(--space-5); }
+.process-row { padding: var(--space-5); display: flex; align-items: center; gap: var(--space-6p); border-radius: 16px; }
+.process-row--light { background: var(--color-surface-strong); color: var(--color-text-primary); }
+.process-row--dark { background: var(--color-brand); color: var(--color-text-secondary); }
+.process-row--medium { background: var(--color-brand-mid); color: var(--color-text-secondary); }
+.process-icon {
+  flex-shrink: 0; width: 72px; height: 72px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-surface-white); color: var(--color-brand);
+}
+.process-icon svg { width: 32px; height: 32px; }
+.process-row-copy { flex-grow: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+.process-large-body { font-size: 20px; line-height: var(--lh-base); }
+.process-stage { position: relative; height: var(--stage-h); border-radius: 16px; overflow: hidden; background: var(--color-brand-soft); }
+.process-frame {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transform: scale(1.04);
+  transition: opacity .7s var(--ease-soft), transform 1.2s var(--ease-out);
+}
+.process-frame:first-child, .js .process-frame.is-active { opacity: 1; transform: none; }
+.js .process-frame:first-child:not(.is-active) { opacity: 0; }
+
+/* Dành cho quán */
+.roastery-partners { padding: var(--space-8) var(--gutter); background: var(--color-surface-white); }
+.roastery-partners-container { width: 100%; max-width: var(--container); margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: var(--space-7); }
+.roastery-partners-intro { width: 100%; display: flex; flex-direction: column; align-items: center; gap: var(--space-4); text-align: center; }
+.roastery-partners-heading { max-width: 620px; }
+.roastery-partners-description { max-width: 440px; }
+.roastery-partners-grid { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5) var(--space-6); }
+.roastery-partner-card {
+  min-width: 0; padding: var(--space-5);
+  display: flex; flex-direction: column; gap: var(--space-7);
+  border: 1px solid var(--color-line); border-radius: 16px;
+  transition: border-color var(--dur-instant) ease;
+}
+.roastery-partner-card:hover { border-color: var(--color-brand-line); }
+.roastery-partner-icon {
+  flex-shrink: 0; width: 64px; height: 64px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-surface-strong); color: var(--color-brand);
+}
+.roastery-partner-icon svg { width: 32px; height: 32px; }
+.roastery-partner-copy { display: flex; flex-direction: column; gap: var(--space-3); }
+.roastery-partner-body { font-size: 20px; line-height: var(--lh-base); }
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .roastery-story, .roastery-approach { padding-inline: var(--gutter); }
+}
+@media (max-width: 991px) {
+  .roastery-hero { height: auto; padding-bottom: var(--space-7p); }
+  .roastery-hero-photo { position: relative; top: auto; width: 100%; margin-top: var(--space-7); }
+  .roastery-hero-photo img { transform: none !important; }
+  .roastery-story-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .roastery-story-row { display: contents; }
+  .roastery-feature-photo { height: 480px; }
+  .roastery-feature-photo img { transform: none !important; }
+  .process-track { height: auto; }
+  .process-marker { display: none; }
+  .process-container { position: static; grid-template-columns: minmax(0, 1fr); gap: var(--space-6p); }
+  .process-stage { height: 480px; }
+  .roastery-partners-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .roastery-story, .roastery-approach, .roastery-partners { padding-block: var(--space-8); }
+  .roastery-process { padding-block: var(--space-8); }
+  .roastery-story-grid { grid-template-columns: minmax(0, 1fr); }
+  .roastery-story-card { height: auto; min-height: 220px; }
+  .roastery-story-photo { height: 300px; }
+  .roastery-values { grid-template-columns: minmax(0, 1fr); }
+  .roastery-value-card { min-height: 0; }
+  .roastery-feature-photo { height: 360px; }
+  .process-heading { text-align: left; }
+  .process-stage { height: 360px; }
+}
+@media (max-width: 479px) {
+  .roastery-hero-photo { height: 240px; }
+  .roastery-hero-copy .btn { width: 100%; }
+  .roastery-title { font-size: var(--fs-lg); }
+  .process-row { padding: var(--space-4); gap: var(--space-4); }
+  .process-icon { width: 48px; height: 48px; }
+  .process-icon svg { width: 24px; height: 24px; }
+  .process-large-body { font-size: var(--fs-md); }
+  .roastery-partners-grid { grid-template-columns: minmax(0, 1fr); }
+  .roastery-partner-body { font-size: var(--fs-md); }
+}

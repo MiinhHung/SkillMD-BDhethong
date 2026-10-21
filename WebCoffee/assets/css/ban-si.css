@@ -1,0 +1,163 @@
+/* SID CORP Coffee - trang Bán sỉ (ban-si.html). Chỉ dùng token trong style.css. */
+
+/* Hero */
+.wholesale-hero {
+  position: relative; overflow: hidden;
+  padding: var(--space-9) var(--gutter) var(--space-11);
+  background: var(--color-surface-base);
+}
+.wholesale-hero-wave {
+  position: absolute; z-index: 0; bottom: -24px; left: 50%; transform: translateX(-50%);
+  width: 1620px; height: 460px; max-width: none; pointer-events: none;
+  color: rgba(89, 60, 48, .05);
+}
+.wholesale-hero-content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: var(--space-6p); }
+.wholesale-hero-top { width: 100%; max-width: 760px; display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
+.wholesale-heading-group { width: 100%; display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+.wholesale-h1 { text-align: center; }
+.wholesale-intro { max-width: 540px; font-size: var(--fs-md); text-align: center; }
+
+/* Đối tượng (nền nâu) */
+.wholesale-audience {
+  position: relative; overflow: hidden;
+  padding: var(--space-9) var(--gutter);
+  background: var(--color-brand);
+}
+.wholesale-audience-wave {
+  position: absolute; z-index: 0; top: 38px; left: -100px;
+  width: 2220px; height: 630px; max-width: none; pointer-events: none;
+  color: rgba(241, 220, 199, .07);
+}
+.wholesale-audience-grid {
+  position: relative; z-index: 1;
+  width: 100%; max-width: 1060px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6p);
+  text-align: center;
+}
+.wholesale-audience-item { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+.wholesale-audience-heading {
+  font-family: var(--font-heading); font-weight: 600; font-size: 52px; line-height: 1.2;
+  font-variation-settings: "SOFT" 0, "WONK" 1, "opsz" 60;
+  color: var(--color-surface-strong); text-wrap: balance;
+}
+.wholesale-audience-copy { max-width: 300px; color: var(--color-text-secondary); font-size: 20px; line-height: var(--lh-base); }
+
+/* Khung chung */
+.wholesale-container { width: 100%; max-width: var(--container); margin: 0 auto; display: flex; flex-direction: column; gap: 72px; }
+.wholesale-section-intro { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); text-align: center; }
+.wholesale-section-copy { max-width: 540px; }
+.wholesale-h3 { color: inherit; }
+
+/* Những điều trao đổi */
+.wholesale-discuss { padding: var(--space-9) var(--gutter); background: var(--color-surface-white); }
+.wholesale-feature-list { width: 100%; display: flex; flex-direction: column; gap: var(--space-7); }
+.wholesale-feature {
+  position: relative; overflow: hidden;
+  min-height: 444px; padding: var(--space-6) var(--space-6) 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 120px; align-items: stretch;
+  border-radius: var(--radius-sm);
+}
+.wholesale-feature--light { background: var(--color-surface-strong); color: var(--color-text-primary); }
+.wholesale-feature--dark { background: var(--color-brand); color: var(--color-text-secondary); }
+.wholesale-feature--mid { background: var(--color-brand-mid); color: var(--color-text-secondary); }
+.wholesale-feature-wave {
+  position: absolute; z-index: 0; top: -40px; left: -60px;
+  width: 1340px; height: 520px; max-width: none; pointer-events: none;
+  color: rgba(67, 44, 35, .06);
+}
+.wholesale-feature--dark .wholesale-feature-wave, .wholesale-feature--mid .wholesale-feature-wave { color: rgba(241, 220, 199, .07); }
+.wholesale-feature-left { position: relative; z-index: 1; min-width: 0; padding: var(--space-6) var(--space-6) 0; display: flex; flex-direction: column; align-items: flex-start; }
+.wholesale-number {
+  flex-shrink: 0; width: 66px; height: 66px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-surface-white); color: var(--color-text-tertiary);
+  font-family: var(--font-heading); font-weight: 600; font-size: var(--fs-2xl); line-height: 1;
+  font-variation-settings: "SOFT" 0, "WONK" 1, "opsz" 40;
+}
+.wholesale-feature-copy { width: 100%; max-width: 440px; margin-top: 59px; display: flex; flex-direction: column; gap: var(--space-4); }
+.wholesale-feature-description { font-size: var(--fs-md); line-height: var(--lh-base); }
+.wholesale-feature-description--lg { font-size: 20px; }
+.wholesale-feature-photo {
+  position: relative; z-index: 1; align-self: start;
+  width: 100%; height: 380px; object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+.wholesale-feature-photo--edge { border-radius: var(--radius-sm) 0 0 0; }
+.wholesale-feature-photo--barista { object-position: 50% 40%; }
+
+/* Vì sao hợp tác */
+.wholesale-partners { padding: var(--space-9) var(--gutter); background: var(--color-surface-base); }
+.wholesale-partner-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-7); }
+.wholesale-partner-card {
+  position: relative; overflow: hidden;
+  height: 640px; padding: var(--space-7) var(--space-5);
+  background: var(--color-brand-line); color: var(--color-text-primary);
+  border-radius: var(--radius-sm);
+}
+.wholesale-partner-card--dark { background: var(--color-brand-mid); color: var(--color-text-secondary); }
+.wholesale-partner-wave {
+  position: absolute; z-index: 0; top: 0; left: -120px;
+  width: 1000px; height: 640px; max-width: none; pointer-events: none;
+  color: rgba(67, 44, 35, .06);
+}
+.wholesale-partner-card--dark .wholesale-partner-wave { color: rgba(241, 220, 199, .08); }
+.wholesale-partner-content { position: relative; z-index: 1; width: 100%; max-width: 440px; display: flex; flex-direction: column; gap: var(--space-7); }
+.wholesale-icon-wrap {
+  flex-shrink: 0; width: 64px; height: 64px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-surface-white); color: var(--color-brand);
+}
+.wholesale-icon-wrap svg { width: 28px; height: 28px; }
+.wholesale-partner-copy { display: flex; flex-direction: column; gap: var(--space-4); }
+.wholesale-partner-description { font-size: var(--fs-md); line-height: var(--lh-base); }
+.wholesale-partner-photo {
+  position: absolute; z-index: 1; top: 420px; left: var(--space-6p);
+  width: calc(100% - 2 * var(--space-6p)); height: 256px; object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  transition: transform .6s var(--ease-out);
+}
+.wholesale-partner-card:hover .wholesale-partner-photo { transform: translateY(-8px); }
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .wholesale-feature { gap: var(--space-7); }
+  .wholesale-partner-card { height: 680px; }
+  .wholesale-partner-photo { top: 460px; }
+}
+@media (max-width: 991px) {
+  .wholesale-hero { padding-bottom: var(--space-10); }
+  .wholesale-hero-wave { width: 220%; height: 300px; }
+  .wholesale-audience-heading { font-size: var(--fs-2xl); }
+  .wholesale-audience-wave { width: 300%; height: 400px; }
+  .wholesale-container { gap: var(--space-7); }
+  .wholesale-feature { min-height: 0; padding: var(--space-5); gap: var(--space-6); }
+  .wholesale-feature-left { padding: var(--space-4) 0 var(--space-4) var(--space-4); }
+  .wholesale-feature-copy { margin-top: var(--space-5); }
+  .wholesale-feature-photo { height: 360px; align-self: center; }
+  .wholesale-feature-photo--edge { border-radius: var(--radius-sm); }
+  .wholesale-partner-grid { gap: var(--space-5); }
+  .wholesale-partner-card { height: auto; padding: var(--space-6) var(--space-5) 0; }
+  .wholesale-partner-content { gap: var(--space-6); }
+  .wholesale-partner-photo { position: relative; top: auto; left: auto; width: 100%; margin-top: var(--space-6); }
+}
+@media (max-width: 767px) {
+  .wholesale-hero { padding-bottom: var(--space-9); }
+  .wholesale-audience { padding-block: var(--space-8); }
+  .wholesale-audience-grid { grid-template-columns: minmax(0, 1fr); }
+  .wholesale-audience-copy { max-width: 420px; font-size: var(--fs-md); }
+  .wholesale-discuss, .wholesale-partners { padding-block: var(--space-8); }
+  .wholesale-container { gap: var(--space-6p); }
+  .wholesale-feature { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+  .wholesale-feature-left { padding: var(--space-2) var(--space-2) 0; }
+  .wholesale-h3 { text-align: left; }
+  .wholesale-feature-photo { height: 280px; }
+  .wholesale-feature-wave { width: 300%; height: 100%; }
+  .wholesale-partner-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+  .wholesale-partner-photo { height: 240px; }
+}
+@media (max-width: 479px) {
+  .wholesale-hero .btn { width: 100%; }
+  .wholesale-feature { padding: 20px; gap: var(--space-5); }
+  .wholesale-feature-photo { height: 220px; }
+  .wholesale-feature-description--lg { font-size: var(--fs-md); }
+}

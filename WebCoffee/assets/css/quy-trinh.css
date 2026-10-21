@@ -1,0 +1,86 @@
+/* SID CORP Coffee - Quy trình (quy-trinh.html). Chỉ dùng token trong style.css. */
+
+/* Hero */
+.hiw-hero {
+  position: relative; overflow: hidden;
+  padding: var(--space-8) var(--gutter) var(--space-9);
+  background: var(--color-surface-base);
+}
+.hiw-hero-wave {
+  position: absolute; top: 120px; left: calc(50% + 40px);
+  width: 1136px; height: 605px; max-width: none;
+  transform: rotate(-42deg); transform-origin: 30% 50%;
+  color: var(--color-surface-muted); pointer-events: none;
+}
+.hiw-container { position: relative; z-index: 1; max-width: var(--container); margin: 0 auto; }
+.hiw-hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-6p); }
+.hiw-hero-top { width: 100%; max-width: 640px; display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-5); }
+.hiw-heading-stack { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+.hiw-h1 { text-align: left; }
+.hiw-hero-description { max-width: 526px; font-size: var(--fs-md); }
+
+/* Ba bước */
+.hiw-steps { padding: var(--space-8) var(--gutter); background: var(--color-surface-white); scroll-margin-top: var(--space-5); }
+.hiw-steps-container { max-width: var(--container); margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: var(--space-7); }
+.hiw-h2 { max-width: 640px; line-height: 1.4; }
+.hiw-section-description { max-width: 420px !important; }
+.hiw-steps-grid {
+  width: 100%; margin: 0; padding: 0; list-style: none;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: var(--space-6);
+}
+.hiw-step {
+  min-width: 0; padding: var(--space-5);
+  display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-7);
+  background: var(--color-surface-white);
+  border: 1px solid var(--color-line); border-radius: 16px;
+}
+.hiw-icon-circle {
+  flex-shrink: 0; width: 64px; height: 64px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-surface-strong); color: var(--color-brand);
+}
+.hiw-icon-circle svg { width: 32px; height: 32px; }
+.hiw-step-copy { min-width: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+.hiw-h3 { color: var(--color-text-primary); text-wrap: pretty; }
+.hiw-step-description { font-size: var(--fs-md); }
+
+/* Sau khi gửi yêu cầu */
+.hiw-next { padding: var(--space-8) var(--gutter) var(--space-9); background: var(--color-surface-base); }
+.hiw-next-container { max-width: var(--container); margin: 0 auto; display: flex; flex-direction: column; gap: 70px; }
+.hiw-next-top { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--space-6p); }
+.hiw-next-title { line-height: 1.4; text-align: left; }
+.hiw-next-right { min-width: 0; padding-top: var(--space-4); display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-6); }
+.hiw-next-description { font-size: var(--fs-md); }
+.hiw-picture {
+  position: relative; overflow: hidden;
+  aspect-ratio: 1280 / 636;
+  border-radius: 16px 16px 16px var(--radius-sm);
+  background: var(--color-text-primary);
+}
+.hiw-picture-image { width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 50%; will-change: transform; }
+
+/* Responsive */
+@media (max-width: 991px) {
+  .hiw-hero-wave { left: 40%; top: 160px; }
+  .hiw-steps-grid { grid-template-columns: 1fr; gap: var(--space-5); }
+  .hiw-step { flex-direction: row; gap: var(--space-5); }
+  .hiw-next-container { gap: var(--space-7); }
+  .hiw-next-top { grid-template-columns: 1fr; gap: var(--space-5); }
+  .hiw-next-right { padding-top: 0; gap: var(--space-5); }
+  .hiw-picture-image { transform: none !important; }
+}
+@media (max-width: 767px) {
+  .hiw-hero { padding: var(--space-7p) var(--gutter) var(--space-8); }
+  .hiw-hero-wave { left: 20%; top: 260px; opacity: .8; }
+  .hiw-h2 { text-align: center; }
+  .hiw-steps, .hiw-next { padding-block: var(--space-7p); }
+  .hiw-picture { aspect-ratio: 16 / 9; }
+  .hiw-h3 { font-size: var(--fs-lg); line-height: 1.35; }
+}
+@media (max-width: 479px) {
+  .hiw-hero-copy > .btn, .hiw-next-right > .btn { align-self: stretch; }
+  .hiw-steps-container { gap: var(--space-6); }
+  .hiw-step { flex-direction: column; padding: 18px; gap: var(--space-6); }
+  .hiw-next-container { gap: var(--space-6); }
+  .hiw-picture { aspect-ratio: 4 / 3; }
+}
