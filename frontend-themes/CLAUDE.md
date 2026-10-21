@@ -1,7 +1,7 @@
-# Quy chuẩn giao diện cho mọi site trong website/
+# Quy chuẩn giao diện cho mọi site trong repo
 
 Site tĩnh HTML/CSS/JS thuần, tiếng Việt, mục tiêu bán hàng + giới thiệu doanh nghiệp (không phải dashboard).
-Được nạp tự động qua `website/CLAUDE.md`. Cách build/check: xem `CLAUDE.md` gốc và README của từng site.
+Được nạp tự động qua `CLAUDE.md` gốc. Cách build/check: xem `CLAUDE.md` gốc và README của từng site.
 
 **Thứ tự ưu tiên:** file này > skill trong `.agents/skills/`. Khi skill mâu thuẫn (font, hero, eyebrow,
 dropdown, React/Next, `generate_image`...), làm theo file này. Skill viết cho React: chỉ lấy nguyên tắc thẩm mỹ,
