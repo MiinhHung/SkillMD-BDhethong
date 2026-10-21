@@ -1,0 +1,9 @@
+/* SID Corp: ghi đè nhỏ trên CSS gốc của mẫu */
+.brand-logo.sid-brand-logo { max-width: 2.6rem; height: auto; }
+.footer-brand.sid-footer-brand { background-image: none; background-color: #ffffff; }
+.sid-footer-brand .footer-brand-logo { height: auto; max-width: 56rem; }
+@media screen and (max-width: 767px) {
+  .brand-logo.sid-brand-logo { max-width: 2.2rem; }
+}
+.navllink, .nav-link, .dropdown-link { white-space: nowrap; }
+.footer-link-text { white-space: nowrap; }
